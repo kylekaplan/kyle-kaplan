@@ -7,7 +7,7 @@ export const Pfp = () => (
     <StaticImage
       src="../../images/kyle.jpg"
       alt="Kyle"
-      // layout="fill"
+      layout="constrained"
       objectFit="cover"
       className="pfp"
       draggable={false}

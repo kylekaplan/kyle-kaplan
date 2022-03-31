@@ -14,7 +14,7 @@ import { Projects } from "../components/Projects/Projects";
 // markup
 const IndexPage = () => {
   return (
-    <Container maxW="container.xl" p="10">
+    <Container maxW="container.xl" p={{ base: 3, md: 5, lg: 10 }}>
 
       <VStack spacing="7">
         <Container maxW="container.lg">
