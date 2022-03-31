@@ -41,7 +41,7 @@ interface NavSectionProps {
 }
 
 export const NavSection: FC<NavSectionProps> = ({ user }) => (
-  <VStack spacing={{ base: 2, sm: 7 }} align="flex-start">
+  <VStack spacing={{ base: 2, sm: 5 }} align="flex-start">
   <Wrap>
     <Anchor href="#projects">
       <Button borderRadius="full" size="lg" aria-label="media-link">

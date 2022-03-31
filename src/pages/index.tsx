@@ -16,26 +16,26 @@ const IndexPage = () => {
   return (
     <Container maxW="container.xl" p="10">
 
-      <VStack spacing="10">
+      <VStack spacing="7">
         <Container maxW="container.lg">
           <Header />
           <Pfp />
         </Container>
 
         <Container maxW="container.lg">
-          <Heading as="h1" size="2xl" pb="4">
+          <Heading as="h1" size="2xl" pb={5}>
             {user.firstName} {user.lastName}
           </Heading>
-          <Heading as="h2" size="lg">
+          <Heading as="h2" fontWeight="regular" size="lg">
             {user.title}. {user.subtitle}.
           </Heading>
         </Container>
 
-        <Container maxW="container.lg">
+        <Container maxW="container.lg" pt={5}>
           <NavSection user={user} />
         </Container>
 
-        <Container maxW="container.lg">
+        <Container maxW="container.lg" pt={2}>
           <Skills />
         </Container>
 
