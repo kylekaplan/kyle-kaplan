@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Container, Heading, VStack, ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { Container, Heading, VStack } from "@chakra-ui/react";
 import { user } from "../data/user";
 import { Header } from "../components/Header/Header";
 import { Pfp } from "../components/Pfp/Pfp";
@@ -11,68 +11,57 @@ import "../styles/normalize.css"
 import "../styles/globals.css"
 import { Projects } from "../components/Projects/Projects";
 
-
-// 2. declare your configuration, these are the defaults
-const config = {
-  useSystemColorMode: false,
-  initialColorMode: "dark",
-}
-// 3. extend the theme
-const customTheme = extendTheme({ config })
-
 // markup
 const IndexPage = () => {
   return (
-    <ChakraProvider theme={customTheme}>
-      <Container maxW="container.xl" p="10">
+    <Container maxW="container.xl" p="10">
 
-        <VStack spacing="10">
-          <Container maxW="container.lg">
-            <Header />
-            <Pfp />
-          </Container>
+      <VStack spacing="10">
+        <Container maxW="container.lg">
+          <Header />
+          <Pfp />
+        </Container>
 
-          <Container maxW="container.lg">
-            <Heading as="h1" size="2xl" pb="4">
-              {user.firstName} {user.lastName}
-            </Heading>
-            <Heading as="h2" size="lg">
-              {user.title}. {user.subtitle}.
-            </Heading>
-          </Container>
+        <Container maxW="container.lg">
+          <Heading as="h1" size="2xl" pb="4">
+            {user.firstName} {user.lastName}
+          </Heading>
+          <Heading as="h2" size="lg">
+            {user.title}. {user.subtitle}.
+          </Heading>
+        </Container>
 
-          <Container maxW="container.lg">
-            <NavSection user={user} />
-          </Container>
+        <Container maxW="container.lg">
+          <NavSection user={user} />
+        </Container>
 
-          <Container maxW="container.lg">
-            <Skills />
-          </Container>
+        <Container maxW="container.lg">
+          <Skills />
+        </Container>
 
-          <Container maxW="container.lg" id="projects">
-            <Projects />
-          </Container>
+        <Container maxW="container.lg" id="projects">
+          <Projects />
+        </Container>
 
-          {/* <Container maxW="container.sm">
-            <Box w="100%">
-              <Text fontSize={22} as="i">
-                An indicator has the value when it&apos;s indicating something. But
-                if it&apos;s not indicating something, it shouldn&apos;t be there.
-              </Text>
-            </Box>
-            <Box w="100%" textAlign="right">
-              <Text fontSize={22} as="strong">
-                - Jonathan Ive, Apple
-              </Text>
-            </Box>
-          </Container> */}
+        {/* <Container maxW="container.sm">
+          <Box w="100%">
+            <Text fontSize={22} as="i">
+              An indicator has the value when it&apos;s indicating something. But
+              if it&apos;s not indicating something, it shouldn&apos;t be there.
+            </Text>
+          </Box>
+          <Box w="100%" textAlign="right">
+            <Text fontSize={22} as="strong">
+              - Jonathan Ive, Apple
+            </Text>
+          </Box>
+        </Container> */}
 
-          <Container maxW="container.lg">
-            {/* <Footer /> */}
-          </Container>
-        </VStack>
-      </Container>
-    </ChakraProvider>
+        <Container maxW="container.lg">
+          {/* <Footer /> */}
+        </Container>
+      </VStack>
+    </Container>
   )
 }
 
