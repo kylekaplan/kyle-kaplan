@@ -42,4 +42,5 @@ a {
   border-radius: 100%;
   border: 8px solid #d3d3d3 !important;
   opacity: 1;
+  overflow: hidden;
 }
