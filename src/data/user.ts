@@ -27,8 +27,8 @@ export const user: IUser = {
       url: "https://twitter.com/KylesCrypto1"
     },
     {
-      linktype: "telegram",
-      url: "https://t.me/kylekaplan_eth"
+      linktype: "good reads",
+      url: "https://www.goodreads.com/kylekaplan"
     },
   ],
   skills: [

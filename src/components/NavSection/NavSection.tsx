@@ -7,6 +7,7 @@ import { FaYoutube } from "@react-icons/all-files/fa/FaYoutube";
 import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter";
 import { FaTelegramPlane } from "@react-icons/all-files/fa/FaTelegramPlane";
 import { AiOutlineMail } from "@react-icons/all-files/ai/AiOutlineMail";
+import { FaGoodreadsG } from "@react-icons/all-files/fa/FaGoodreadsG";
 import { Anchor } from "../Anchor/Anchor";
 import { IUser } from "../../interfaces/user";
 import CopyButtonWithTooltip from "../CopyButtonWithTooltip/CopyButtonWithTooltip";
@@ -29,6 +30,9 @@ const LeftIcon = ({ linktype }: LeftIcon) => {
   }
   if (linktype === "telegram") {
     return <FaTelegramPlane />;
+  }
+  if (linktype === "good reads") {
+    return <FaGoodreadsG />;
   }
   if (linktype === "email") {
     return <AiOutlineMail />;
@@ -56,6 +60,16 @@ export const NavSection: FC<NavSectionProps> = ({ user }) => (
         borderRadius: "full",
       }}
     />
+    <Anchor href="https://t.me/kylekaplan_eth" key="https://t.me/kylekaplan_eth" target="_blank">
+      <Button
+        borderRadius="full"
+        size="lg"
+        aria-label="media-link"
+        leftIcon={<FaTelegramPlane />}
+      >
+        telegram
+      </Button>
+    </Anchor>
     </Wrap>
 
   <Wrap>
