@@ -2,8 +2,8 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: ``,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Kyle Kaplan`,
+    siteUrl: `https://kylekaplan.io/`
   },
   plugins: [
     "gatsby-plugin-image",
