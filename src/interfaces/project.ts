@@ -9,6 +9,7 @@ export interface IProject {
   imageUrl?: string;
   imageAlt?: string;
   tags?: string[];
+  date?: string;
 }
 
 export interface ITechnologies {
@@ -19,5 +20,5 @@ export enum PROJECT_TYPE {
   OPEN_SOURCE = "Open Source",
   CLIENT = "Client",
   PERSONAL = "Personal",
-  START_UP = "Work/Start Up",
+  START_UP = "Work",
 }

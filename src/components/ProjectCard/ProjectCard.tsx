@@ -36,6 +36,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
       boxShadow="md"
       borderRadius="lg"
       height="100%"
+      position="relative"
     >
       <HStack p="4">
         <Box fontWeight="semibold" as="h4" lineHeight="tight" isTruncated>
@@ -56,7 +57,17 @@ export const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           layout="fill"
         />
       </Box>
-      <Box p="6">
+      <Box pl="6" pr="6" pb="6" pt="1" mb="5"> {/* mb is covering for absolute positioned date  */}
+        <Box
+          color="gray.100"
+          fontSize="md"
+          mt="2"
+          mb="3"
+        >
+          <p>
+            {project?.description}
+          </p>
+        </Box>
         {project.projectType ? (
           <Box mb="4">
             <Tag colorScheme="green">{project?.projectType}</Tag>
@@ -74,6 +85,20 @@ export const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           </Wrap>
         </Box>
       </Box>
+      {project.date ? (
+        <Box
+          mb="1"
+          pl={6}
+          position="absolute"
+          bottom={0}
+          color="gray.500"
+          fontSize="sm"
+        >
+          {project?.date}
+        </Box>
+      ) : (
+        <></>
+      )}
     </Box>
   );
 }

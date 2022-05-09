@@ -6,6 +6,8 @@ import compoundOrNot from "../images/projects/compoundornot/compoundornot.png";
 import taxaroo from "../images/projects/taxaroo/taxaroo.png";
 import drippd from "../images/projects/drippd/drippd.png";
 import openWork from "../images/projects/openWork/open-work.png";
+import availaBull from "../images/projects/availaBull/availaBull.png";
+import coolSportingGoods from "../images/projects/coolSportingGoods/coolSportingGoods.png";
 
 export const projects: any = [
   {
@@ -16,7 +18,9 @@ export const projects: any = [
     projectType: PROJECT_TYPE.PERSONAL,
     type: "React",
     url: "https://kylekaplan.github.io/open-work/",
-    tags: ["React", "Chakra-ui", "EthersJS", "Solidity", "IPFS"],
+    tags: ["React", "Chakra-ui", "EthersJS", "Solidity", "IPFS", "Open Source"],
+    date: "2022",
+    description: "The future of frelancing.",
   },
   {
     id: "dec702cb-4387-480d-a995-f641b8a21559",
@@ -27,16 +31,20 @@ export const projects: any = [
     type: "React",
     url: "https://drippd.herokuapp.com/",
     tags: ["React", "Antd", "Firebase", "Twilio"],
+    date: "2021",
+    description: "Daily lessons texted straight your phone.",
   },
   {
     id: "b0c6c1cf-ef2e-402d-9932-0f8f41f2c4b5",
     imageAlt: "Open Source Project",
     imageUrl: compoundOrNot,
     title: "Compound Or Not",
-    projectType: PROJECT_TYPE.OPEN_SOURCE,
+    projectType: PROJECT_TYPE.PERSONAL,
     type: "React",
     url: "https://compoundornot.com/",
-    tags: ["React", "NextJS", "Geist UI", "Styled Components", "Firebase"],
+    tags: ["React", "NextJS", "Geist UI", "Firebase", "Open Source"],
+    date: "2021",
+    description: "A compound interest calculator for DeFi.",
   },
   {
     id: "3827ab50-4caa-49eb-8b80-7c3336ac8d3d",
@@ -55,6 +63,8 @@ export const projects: any = [
     title: "Taxaroo",
     type: "React",
     url: "https://www.taxaroo.com/",
+    date: "2021 - 2022",
+    description: "Tax managment software.",
   },
   {
     id: "42259e2b-d8a2-4fcb-b324-1488a187134a",
@@ -62,15 +72,17 @@ export const projects: any = [
     imageAlt: "Student Life 101 Landing",
     title: "Student Life 101",
     type: "React",
-    url: "https://studentlife101.com/",
+    url: "https://apps.apple.com/us/app/student-life-101-usf/id1522408637",
     projectType: PROJECT_TYPE.PERSONAL,
     tags: [
-      "React",
-      "TypeScript",
-      "Styled Components",
+      "React Native",
+      "React Native Paper",
       "Firebase",
-      "Ant Design",
+      "iOS",
+      "Android",
     ],
+    date: "2020 - 2022",
+    description: "Coupon book app for Students.",
   },
   {
     id: "bb2cb9df-f3af-4cb2-99e3-b4b6aa4290f2",
@@ -81,6 +93,8 @@ export const projects: any = [
     url: "https://nofloodflorida.com/",
     tags: ["React", "Styled Components", "Firebase", "GatsbyJS"],
     projectType: PROJECT_TYPE.CLIENT,
+    date: "2019",
+    description: "See if you qualify for flood insurance removal.",
   },
   {
     id: "1b01096a-fa81-4ff2-975c-95c2359fb5b4",
@@ -91,5 +105,42 @@ export const projects: any = [
     url: "https://flood-score.firebaseapp.com/",
     projectType: PROJECT_TYPE.CLIENT,
     tags: ["Stripe", "React", "Styled Components", "Firebase"],
+    date: "2018",
+    description: "See your flood risk score.",
+  },
+  {
+    id: "c8f16394-1268-41de-9a17-58d280fcc9ef",
+    imageUrl: availaBull,
+    imageAlt: "Availa-Bull",
+    title: "Availa-Bull",
+    type: "React",
+    url: "https://web.archive.org/web/20191122172111/http://availa-bull.com:80/",
+    projectType: PROJECT_TYPE.PERSONAL,
+    tags: [
+      "JavaScript",
+      "HTML/CSS",
+      "MySQL",
+      "PHP",
+    ],
+    date: "2017",
+    description: "Get the hard to get classes at USF.",
+  },
+  {
+    id: "49f090a0-654e-4311-946b-4b0f4338d222",
+    imageUrl: coolSportingGoods,
+    imageAlt: "Cool Sporting Goods",
+    title: "Cool Sporting Goods",
+    type: "React",
+    url: "https://web.archive.org/web/20150523004506/http://www.coolsportinggoods.com:80/",
+    projectType: PROJECT_TYPE.PERSONAL,
+    tags: [
+      "My First Website",
+      "JavaScript",
+      "HTML/CSS",
+      "MySQL",
+      "PHP",
+    ],
+    date: "2011 - 2015",
+    description: "My first website.",
   },
 ];

@@ -1,6 +1,6 @@
 import React from "react";
 import { FC } from "react";
-import { Button, VStack, Wrap } from "@chakra-ui/react";
+import { Button, Tooltip, VStack, Wrap } from "@chakra-ui/react";
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
 import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
 import { FaYoutube } from "@react-icons/all-files/fa/FaYoutube";
@@ -73,16 +73,18 @@ export const NavSection: FC<NavSectionProps> = ({ user }) => (
     </Wrap>
 
   <Wrap>
-    {user?.mediaLinks?.map((item: { url: any; linktype: {} | null | undefined; }) => (
+    {user?.mediaLinks?.map((item: { url: any; linktype: {} | null | undefined; tooltip?: string | undefined }) => (
       <Anchor href={item.url} key={item.url} target="_blank">
-        <Button
-          borderRadius="full"
-          size="lg"
-          aria-label="media-link"
-          leftIcon={<LeftIcon linktype={item.linktype} />}
-        >
-          {item.linktype}
-        </Button>
+        <Tooltip label={item.tooltip} placement="top">
+          <Button
+            borderRadius="full"
+            size="lg"
+            aria-label="media-link"
+            leftIcon={<LeftIcon linktype={item.linktype} />}
+          >
+            {item.linktype}
+          </Button>
+        </Tooltip>
       </Anchor>
     ))}
   </Wrap>

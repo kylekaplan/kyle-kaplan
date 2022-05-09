@@ -10,6 +10,7 @@ import { Skills } from "../components/Skills/Skills";
 import "../styles/normalize.css"
 import "../styles/globals.css"
 import { Projects } from "../components/Projects/Projects";
+import { Footer } from "../components/Footer/Footer";
 
 // markup
 const IndexPage = () => {
@@ -58,7 +59,7 @@ const IndexPage = () => {
         </Container> */}
 
         <Container maxW="container.lg">
-          {/* <Footer /> */}
+          <Footer />
         </Container>
       </VStack>
     </Container>
