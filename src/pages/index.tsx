@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Container, Heading, VStack } from "@chakra-ui/react";
+import { Helmet } from "react-helmet";
 import { user } from "../data/user";
 import { Header } from "../components/Header/Header";
 import { Pfp } from "../components/Pfp/Pfp";
@@ -16,6 +17,10 @@ import { Footer } from "../components/Footer/Footer";
 const IndexPage = () => {
   return (
     <Container maxW="container.xl" p={{ base: 3, md: 5, lg: 10 }}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{`${user.firstName} ${user.lastName}`}</title>
+      </Helmet>
 
       <VStack spacing="7">
         <Container maxW="container.lg">
