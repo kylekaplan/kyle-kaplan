@@ -21,7 +21,7 @@ export const user: IUser = {
     {
       linktype: "youtube",
       url: "https://www.youtube.com/channel/UCA_CofLqBOGylieTod7y06Q",
-      tooltip: "40k+ views",
+      tooltip: "40k+ views!",
     },
     {
       linktype: "twitter",
