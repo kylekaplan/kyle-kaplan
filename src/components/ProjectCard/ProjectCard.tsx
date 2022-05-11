@@ -17,6 +17,7 @@ const StyledImage = styled(Image)`
   &:hover {
     transform: scale(1.2);
     transition: 0.5s ease;
+    cursor: pointer;
   }
 `;
 
@@ -55,6 +56,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           alt={project.imageAlt}
           overflow="hidden"
           layout="fill"
+          onClick={() => window.open(project.url, "_blank")}
         />
       </Box>
       <Box pl="6" pr="6" pb="6" pt="1" mb="5"> {/* mb is covering for absolute positioned date  */}

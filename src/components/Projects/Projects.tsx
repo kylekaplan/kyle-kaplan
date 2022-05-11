@@ -21,10 +21,6 @@ export const Projects: FC<ProjectsProps> = () => {
 
   const ProjectButton: any = styled(WrapItem)`
     border-radius: 50px;
-
-    &:hover {
-      cursor: pointer;
-    }
   `;
 
   return (
