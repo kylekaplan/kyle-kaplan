@@ -52,7 +52,7 @@ export const NavSection: FC<NavSectionProps> = ({ user }) => {
           Projects
         </Button>
       </Anchor>
-      <Anchor href={`${window.location.origin}/kyle-kaplan-resume.pdf`} key={`${window.location.origin}/kyle-kaplan-resume.pdf`} target="_blank">
+      <Anchor href={`${typeof window !== 'undefined' ? window.location.origin : 'https://kylekaplan.io'}/kyle-kaplan-resume.pdf`} key="/kyle-kaplan-resume.pdf" target="_blank">
         <Button
           borderRadius="full"
           size="lg"
