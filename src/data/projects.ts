@@ -59,6 +59,7 @@ export const projects: any = [
       "GraphQL",
       "NestJS",
       "Ant Design",
+      "Prisma",
     ],
     title: "Taxaroo",
     type: "React",

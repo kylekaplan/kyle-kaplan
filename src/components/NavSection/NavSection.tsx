@@ -7,7 +7,6 @@ import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter";
 import { FaTelegramPlane } from "@react-icons/all-files/fa/FaTelegramPlane";
 import { AiOutlineMail } from "@react-icons/all-files/ai/AiOutlineMail";
 import { FaGoodreadsG } from "@react-icons/all-files/fa/FaGoodreadsG";
-import { FaRegFilePdf } from "@react-icons/all-files/fa/FaRegFilePdf";
 import { Anchor } from "../Anchor/Anchor";
 import { IUser } from "../../interfaces/user";
 import CopyButtonWithTooltip from "../CopyButtonWithTooltip/CopyButtonWithTooltip";
