@@ -1,5 +1,4 @@
-import React from "react";
-import { FC } from "react";
+import React, { FC } from "react";
 import { Button, Tooltip, VStack, Wrap } from "@chakra-ui/react";
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
 import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
@@ -8,6 +7,7 @@ import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter";
 import { FaTelegramPlane } from "@react-icons/all-files/fa/FaTelegramPlane";
 import { AiOutlineMail } from "@react-icons/all-files/ai/AiOutlineMail";
 import { FaGoodreadsG } from "@react-icons/all-files/fa/FaGoodreadsG";
+import { FaRegFilePdf } from "@react-icons/all-files/fa/FaRegFilePdf";
 import { Anchor } from "../Anchor/Anchor";
 import { IUser } from "../../interfaces/user";
 import CopyButtonWithTooltip from "../CopyButtonWithTooltip/CopyButtonWithTooltip";
@@ -44,49 +44,61 @@ interface NavSectionProps {
   user: IUser;
 }
 
-export const NavSection: FC<NavSectionProps> = ({ user }) => (
-  <VStack spacing={{ base: 2, sm: 5 }} align="flex-start">
-  <Wrap>
-    <Anchor href="#projects">
-      <Button borderRadius="full" size="lg" aria-label="media-link">
-        projects
-      </Button>
-    </Anchor>
-    <CopyButtonWithTooltip
-      copyText="kylekaplan50@gmail.com"
-      buttonProps={{
-        leftIcon: <AiOutlineMail />,
-        size: "lg",
-        borderRadius: "full",
-      }}
-    />
-    <Anchor href="https://t.me/kylekaplan_eth" key="https://t.me/kylekaplan_eth" target="_blank">
-      <Button
-        borderRadius="full"
-        size="lg"
-        aria-label="media-link"
-        leftIcon={<FaTelegramPlane />}
-      >
-        telegram
-      </Button>
-    </Anchor>
-    </Wrap>
-
-  <Wrap>
-    {user?.mediaLinks?.map((item: { url: any; linktype: {} | null | undefined; tooltip?: string | undefined }) => (
-      <Anchor href={item.url} key={item.url} target="_blank">
-        <Tooltip label={item.tooltip} placement="top">
-          <Button
-            borderRadius="full"
-            size="lg"
-            aria-label="media-link"
-            leftIcon={<LeftIcon linktype={item.linktype} />}
-          >
-            {item.linktype}
-          </Button>
-        </Tooltip>
+export const NavSection: FC<NavSectionProps> = ({ user }) => {
+  return (
+    <VStack spacing={{ base: 2, sm: 5 }} align="flex-start">
+    <Wrap>
+      <Anchor href="#projects">
+        <Button borderRadius="full" size="lg" aria-label="media-link">
+          Projects
+        </Button>
       </Anchor>
-    ))}
-  </Wrap>
-  </VStack>
-);
+      <Anchor href={`${window.location.origin}/kyle-kaplan-resume.pdf`} key={`${window.location.origin}/kyle-kaplan-resume.pdf`} target="_blank">
+        <Button
+          borderRadius="full"
+          size="lg"
+          aria-label="media-link"
+          // leftIcon={<FaRegFilePdf />}
+        >
+          Resume
+        </Button>
+      </Anchor>
+      <CopyButtonWithTooltip
+        copyText="kylekaplan50@gmail.com"
+        buttonProps={{
+          leftIcon: <AiOutlineMail />,
+          size: "lg",
+          borderRadius: "full",
+        }}
+      />
+      <Anchor href="https://t.me/kylekaplan_eth" key="https://t.me/kylekaplan_eth" target="_blank">
+        <Button
+          borderRadius="full"
+          size="lg"
+          aria-label="media-link"
+          leftIcon={<FaTelegramPlane />}
+        >
+          telegram
+        </Button>
+      </Anchor>
+      </Wrap>
+
+    <Wrap>
+      {user?.mediaLinks?.map((item: { url: any; linktype: {} | null | undefined; tooltip?: string | undefined }) => (
+        <Anchor href={item.url} key={item.url} target="_blank">
+          <Tooltip label={item.tooltip} placement="top">
+            <Button
+              borderRadius="full"
+              size="lg"
+              aria-label="media-link"
+              leftIcon={<LeftIcon linktype={item.linktype} />}
+            >
+              {item.linktype}
+            </Button>
+          </Tooltip>
+        </Anchor>
+      ))}
+    </Wrap>
+    </VStack>
+  );
+}
