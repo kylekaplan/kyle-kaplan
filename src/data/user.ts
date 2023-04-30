@@ -1,14 +1,11 @@
-import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
-import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
 import { SkillType } from "../interfaces/skill";
 import { IUser } from "../interfaces/user";
-import { IMediaLink } from "../interfaces/mediaLink";
 
 export const user: IUser = {
   firstName: "Kyle",
   lastName: "Kaplan",
   title: "Full-Stack Developer",
-  subtitle: "Web3 Enthusiast",
+  subtitle: "Crypto Native",
   mediaLinks: [
     {
       linktype: "linkedin",
