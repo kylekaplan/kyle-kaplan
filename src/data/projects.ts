@@ -64,7 +64,7 @@ export const projects: any = [
     title: "Taxaroo",
     type: "React",
     url: "https://www.taxaroo.com/",
-    date: "2021 - 2022",
+    date: "2021 - 2023",
     description: "Tax managment software.",
   },
   {
@@ -142,6 +142,6 @@ export const projects: any = [
       "PHP",
     ],
     date: "2011 - 2015",
-    description: "My first website.",
+    description: "My first ever website.",
   },
 ];
